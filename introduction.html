@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>青戸勇次 — 自己紹介</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --accent:#ff4d4f; /* red */
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#071022 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      width:100%;
+      max-width:920px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .portrait{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      min-height:220px;
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:50%;display:inline-block;background:linear-gradient(135deg,var(--accent),#ff8a80);
+      box-shadow:0 6px 20px rgba(255,77,79,0.18), inset 0 -6px 18px rgba(0,0,0,0.25);
+      margin-bottom:12px;
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;color:#fff;
+    }
+    h1{margin:8px 0 2px;font-size:20px}
+    .subtitle{color:var(--muted);font-size:13px;margin-bottom:12px}
+    .bio{font-size:14px;line-height:1.6;color:#dbeaf6}
+    .meta{margin-top:14px;font-size:13px;color:var(--muted)}
+    .content{
+      padding:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 8px;font-size:16px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .project{background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:10px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0;font-size:14px}
+    .project p{margin:6px 0 0;font-size:13px;color:#dbeaf6}
+    .contact{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;font-size:13px;color:#eaf6ff;text-decoration:none}
+    .footer{font-size:12px;color:var(--muted);text-align:right;margin-top:6px}
+    .pulse{position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(255,77,79,0.18), rgba(255,77,79,0.02) 40%, transparent 60%);filter:blur(8px)}
+
+    @media (max-width:720px){
+      .card{grid-template-columns:1fr;}
+      .portrait{display:flex;align-items:center;gap:14px;padding:16px}
+      .avatar{width:96px;height:96px;font-size:26px}
+    }
+  </style>
+</head>
+<body>
+  <article class="card" aria-label="青戸勇次の自己紹介">
+    <aside class="portrait">
+      <div class="pulse" aria-hidden="true"></div>
+      <div class="avatar" aria-hidden="true">青戸</div>
+      <h1>青戸 勇次</h1>
+      <div class="subtitle">高校教員 / 情報・ビジネス担当 • サッカー部顧問</div>
+      <p class="bio">32歳。授業と部活で人生を編集中。教室は実験場、失敗は教材。コードを書いて遊ぶのが趣味で、生徒と一緒に学ぶのが一番の栄養分。</p>
+      <div class="meta">出身地：島根県 • 好きなもの：コーヒー、サッカー、ゲーム制作</div>
+    </aside>
+
+    <main class="content">
+      <section class="section">
+        <h2>できること</h2>
+        <div class="chips">
+          <span class="chip">HTML / CSS / JavaScript</span>
+          <span class="chip">Python（Pygame）</span>
+          <span class="chip">Ruby on Rails</span>
+          <span class="chip">授業設計・学習指導</span>
+          <span class="chip">部活動マネジメント</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>注目プロジェクト</h2>
+        <div class="project">
+          <h3>問題作成サイト</h3>
+          <p>HTML＋JavaScriptで動く練習問題サイトを作成。GitHubとGoogleスプレッドシートでデータを管理する仕組みを導入。</p>
+        </div>
+        <div class="project">
+          <h3>Pygameで作る授業用ゲーム</h3>
+          <p>高校生が自宅でも遊んで学べるよう、操作簡単で学習要素を含むゲームを制作中。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>信条</h2>
+        <p>『やってみる』が最強の教材。小さな失敗を積み重ねて、大きな理解をつくる。生徒の目が輝く瞬間、それがやりがい。</p>
+      </section>
+
+      <section class="section">
+        <h2>連絡先</h2>
+        <div class="contact">
+          <a class="btn" href="#" onclick="alert('メール送信機能はここではデモです。');return false;">メールで連絡</a>
+          <a class="btn" href="#" onclick="alert('SNSリンクの代わりに学校名やアカウントをここに書いてください。');return false;">SNS / 学校情報</a>
+        </div>
+        <div class="footer">更新: 2025年10月20日</div>
+      </section>
+    </main>
+  </article>
+</body>
+</html>
